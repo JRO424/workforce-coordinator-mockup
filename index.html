@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Workforce Coordinator | HR Coordinator</title>
+    <title>Workforce Coordinator | HR Coordinator by FYHR</title>
     <meta
       name="description"
-      content="HR Coordinator gives small businesses a coordinated HR function without hiring a department."
+      content="HR Coordinator gives growing small businesses a coordinated HR function without hiring a department."
     />
     <link
       rel="icon"
@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=DM+Sans:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -27,8 +27,10 @@
         --slate: #35464e;
         --line: #d0dde8;
         --white: #ffffff;
-        --ink: #0f2634;
+        --ink: #102b3a;
         --soft: #f8fbfd;
+        --green: #2d7a68;
+        --red: #a9413b;
         --shadow: 0 28px 80px rgba(8, 53, 84, 0.14);
       }
 
@@ -56,6 +58,16 @@
         background: rgba(254, 169, 90, 0.5);
       }
 
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
       .skip-link {
         position: fixed;
         top: 12px;
@@ -73,16 +85,6 @@
         transform: translateY(0);
       }
 
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      img {
-        display: block;
-        max-width: 100%;
-      }
-
       .page {
         overflow: hidden;
       }
@@ -96,16 +98,16 @@
         position: sticky;
         top: 0;
         z-index: 10;
-        background: rgba(255, 255, 255, 0.92);
-        border-bottom: 1px solid rgba(208, 221, 232, 0.75);
+        background: rgba(255, 255, 255, 0.94);
+        border-bottom: 1px solid rgba(208, 221, 232, 0.85);
         backdrop-filter: blur(16px);
       }
 
       .nav-inner {
         display: flex;
+        min-height: 76px;
         align-items: center;
         justify-content: space-between;
-        min-height: 76px;
         gap: 24px;
       }
 
@@ -113,9 +115,8 @@
         display: flex;
         align-items: center;
         gap: 12px;
-        font-weight: 800;
-        letter-spacing: 0.01em;
         color: var(--navy);
+        font-weight: 900;
       }
 
       .brand-mark {
@@ -128,16 +129,15 @@
         border-radius: 8px;
         font-family: "Barlow Condensed", Arial, sans-serif;
         font-size: 18px;
-        line-height: 1;
       }
 
       .nav-links {
         display: flex;
         align-items: center;
-        gap: 28px;
+        gap: 26px;
         color: var(--slate);
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 900;
       }
 
       .nav-links a {
@@ -150,15 +150,21 @@
 
       .button {
         display: inline-flex;
+        min-height: 48px;
         align-items: center;
         justify-content: center;
-        min-height: 48px;
         padding: 0 18px;
         border: 1px solid transparent;
         border-radius: 8px;
-        font-weight: 800;
-        letter-spacing: 0;
-        transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+        cursor: pointer;
+        font-weight: 900;
+        transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+      }
+
+      .button:focus-visible,
+      a:focus-visible {
+        outline: 3px solid rgba(254, 169, 90, 0.88);
+        outline-offset: 3px;
       }
 
       .button:active {
@@ -188,7 +194,7 @@
       .hero {
         position: relative;
         min-height: calc(100dvh - 76px);
-        padding: 76px 0 42px;
+        padding: 70px 0 46px;
         background:
           linear-gradient(90deg, rgba(240, 245, 250, 0.92), rgba(255, 255, 255, 0.98) 48%, rgba(240, 245, 250, 0.88)),
           repeating-linear-gradient(90deg, rgba(208, 221, 232, 0.32) 0, rgba(208, 221, 232, 0.32) 1px, transparent 1px, transparent 74px),
@@ -208,8 +214,8 @@
       .hero::after {
         content: "";
         position: absolute;
+        top: 116px;
         right: -8vw;
-        top: 112px;
         width: min(720px, 52vw);
         height: min(720px, 52vw);
         pointer-events: none;
@@ -222,7 +228,7 @@
         position: relative;
         z-index: 1;
         display: grid;
-        grid-template-columns: minmax(0, 0.94fr) minmax(420px, 1.06fr);
+        grid-template-columns: minmax(0, 0.94fr) minmax(430px, 1.06fr);
         align-items: center;
         gap: 64px;
       }
@@ -234,7 +240,7 @@
         margin: 0 0 18px;
         color: var(--blue);
         font-size: 13px;
-        font-weight: 800;
+        font-weight: 900;
         letter-spacing: 0.08em;
         text-transform: uppercase;
       }
@@ -271,7 +277,7 @@
       }
 
       .hero-copy {
-        max-width: 660px;
+        max-width: 690px;
         margin: 24px 0 0;
         color: var(--slate);
         font-size: clamp(18px, 1.7vw, 23px);
@@ -286,17 +292,10 @@
       }
 
       .hero-note {
-        margin-top: 30px;
+        margin-top: 28px;
         color: var(--slate);
         font-size: 14px;
-        font-weight: 700;
-      }
-
-      .hero-proof-strip {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 26px;
+        font-weight: 900;
       }
 
       .powered-by {
@@ -307,7 +306,6 @@
         padding: 10px 14px 10px 16px;
         color: var(--white);
         background: var(--navy);
-        border: 1px solid rgba(8, 53, 84, 0.18);
         border-radius: 999px;
         box-shadow: 0 18px 42px rgba(8, 53, 84, 0.16);
       }
@@ -325,24 +323,31 @@
         height: auto;
       }
 
+      .hero-proof-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 24px;
+      }
+
       .proof-chip {
         display: inline-flex;
-        align-items: center;
         min-height: 40px;
+        align-items: center;
         padding: 0 12px;
         color: var(--navy);
         background: rgba(255, 255, 255, 0.78);
         border: 1px solid rgba(208, 221, 232, 0.92);
         border-radius: 999px;
+        box-shadow: 0 10px 24px rgba(8, 53, 84, 0.07);
         font-size: 12px;
         font-weight: 900;
-        box-shadow: 0 10px 24px rgba(8, 53, 84, 0.07);
       }
 
       .system-panel {
         position: relative;
         padding: 22px;
-        background: rgba(255, 255, 255, 0.84);
+        background: rgba(255, 255, 255, 0.86);
         border: 1px solid rgba(208, 221, 232, 0.9);
         border-radius: 18px;
         box-shadow: var(--shadow);
@@ -385,38 +390,6 @@
         text-transform: uppercase;
       }
 
-      .metric-row {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 10px;
-        padding: 16px 0 0;
-      }
-
-      .mini-metric {
-        min-height: 78px;
-        padding: 12px;
-        border: 1px solid rgba(208, 221, 232, 0.86);
-        border-radius: 10px;
-        background: linear-gradient(180deg, var(--white), rgba(240, 245, 250, 0.72));
-      }
-
-      .mini-metric b {
-        display: block;
-        color: var(--navy);
-        font-family: "Barlow Condensed", Arial, sans-serif;
-        font-size: 28px;
-        line-height: 1;
-      }
-
-      .mini-metric span {
-        display: block;
-        margin-top: 8px;
-        color: var(--slate);
-        font-size: 11px;
-        font-weight: 900;
-        text-transform: uppercase;
-      }
-
       .pulse {
         width: 9px;
         height: 9px;
@@ -437,39 +410,58 @@
         }
       }
 
+      .metric-row,
       .coordination-map {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 12px;
+        gap: 10px;
+      }
+
+      .metric-row {
+        padding: 16px 0 0;
+      }
+
+      .mini-metric,
+      .node {
+        border: 1px solid rgba(208, 221, 232, 0.88);
+        border-radius: 10px;
+        background: linear-gradient(180deg, var(--white), rgba(240, 245, 250, 0.7));
+      }
+
+      .mini-metric {
+        min-height: 78px;
+        padding: 12px;
+      }
+
+      .mini-metric b {
+        display: block;
+        color: var(--navy);
+        font-family: "Barlow Condensed", Arial, sans-serif;
+        font-size: 28px;
+        line-height: 1;
+      }
+
+      .mini-metric span,
+      .node span {
+        display: block;
+        margin-top: 8px;
+        color: var(--slate);
+        font-size: 12px;
+      }
+
+      .coordination-map {
         padding: 22px 0;
       }
 
       .node {
         min-height: 104px;
         padding: 16px;
-        border: 1px solid rgba(208, 221, 232, 0.9);
-        border-radius: 10px;
-        background: var(--white);
-        transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
-      }
-
-      .node:hover {
-        border-color: rgba(16, 107, 170, 0.55);
-        box-shadow: 0 18px 38px rgba(8, 53, 84, 0.08);
-        transform: translateY(-2px);
       }
 
       .node strong {
         display: block;
         color: var(--navy);
         font-size: 15px;
-      }
-
-      .node span {
-        display: block;
-        margin-top: 8px;
-        color: var(--slate);
-        font-size: 13px;
       }
 
       .node.center {
@@ -499,13 +491,7 @@
         background: var(--soft);
         color: var(--slate);
         font-size: 13px;
-        font-weight: 700;
-        transition: transform 180ms ease, background 180ms ease;
-      }
-
-      .task:hover {
-        background: var(--white);
-        transform: translateX(2px);
+        font-weight: 900;
       }
 
       .check {
@@ -516,7 +502,7 @@
         color: var(--navy);
         background: var(--amber);
         border-radius: 6px;
-        font-size: 12px;
+        font-size: 11px;
         font-weight: 900;
       }
 
@@ -528,7 +514,7 @@
       }
 
       section {
-        padding: 94px 0;
+        padding: 92px 0;
       }
 
       .section-head {
@@ -536,7 +522,7 @@
         grid-template-columns: minmax(0, 0.95fr) minmax(260px, 0.55fr);
         gap: 48px;
         align-items: end;
-        margin-bottom: 46px;
+        margin-bottom: 44px;
       }
 
       .section-head p {
@@ -545,83 +531,106 @@
         font-size: 18px;
       }
 
-      .problem {
-        background: var(--navy);
+      .dark {
+        color: var(--white);
+        background:
+          linear-gradient(118deg, rgba(254, 169, 90, 0.12), transparent 28%),
+          repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.07) 0, rgba(255, 255, 255, 0.07) 1px, transparent 1px, transparent 78px),
+          var(--navy);
+      }
+
+      .dark h2,
+      .dark h3 {
         color: var(--white);
       }
 
-      .problem h2,
-      .problem h3 {
-        color: var(--white);
+      .dark .section-head p,
+      .dark-copy {
+        color: rgba(255, 255, 255, 0.78);
       }
 
-      .problem .section-head p {
-        color: rgba(255, 255, 255, 0.74);
-      }
-
-      .problem-grid {
+      .thesis-grid {
         display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
         gap: 18px;
       }
 
-      .problem-main,
-      .problem-side {
+      .thesis-card {
+        position: relative;
+        min-height: 252px;
+        overflow: hidden;
+        padding: clamp(26px, 4vw, 44px);
         border: 1px solid rgba(255, 255, 255, 0.18);
         border-radius: 14px;
         background: rgba(255, 255, 255, 0.06);
       }
 
-      .problem-main {
-        position: relative;
-        overflow: hidden;
-        padding: clamp(28px, 4vw, 48px);
-      }
-
-      .problem-main::after {
-        content: "OWN THE GAP";
+      .thesis-card::after {
+        content: attr(data-watermark);
         position: absolute;
-        right: -12px;
-        bottom: -10px;
+        right: -8px;
+        bottom: -8px;
         color: rgba(255, 255, 255, 0.05);
         font-family: "Barlow Condensed", Arial, sans-serif;
-        font-size: clamp(72px, 12vw, 168px);
+        font-size: clamp(78px, 12vw, 150px);
         font-weight: 700;
         line-height: 0.8;
-        white-space: nowrap;
       }
 
-      .problem-main p {
-        max-width: 780px;
-        margin: 20px 0 0;
+      .thesis-card p {
+        position: relative;
+        z-index: 1;
+        margin: 18px 0 0;
         color: rgba(255, 255, 255, 0.78);
-        font-size: 22px;
+        font-size: 20px;
       }
 
-      .problem-side {
+      .tool-strip {
         display: grid;
-        gap: 0;
-        padding: 8px 0;
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        gap: 10px;
       }
 
-      .pain-row {
-        padding: 18px 22px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.13);
-        color: rgba(255, 255, 255, 0.84);
-        font-weight: 700;
+      .tool {
+        min-height: 96px;
+        padding: 16px 12px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--white);
+        box-shadow: 0 12px 30px rgba(8, 53, 84, 0.04);
+        color: var(--navy);
+        font-size: 13px;
+        font-weight: 900;
       }
 
-      .pain-row:last-child {
-        border-bottom: 0;
-      }
-
-      .fit-grid {
+      .gap-line {
         display: grid;
-        grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
-        gap: 42px;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 18px;
+        margin: 30px 0;
+      }
+
+      .gap-line span {
+        height: 1px;
+        background: var(--line);
+      }
+
+      .gap-line b {
+        color: var(--red);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .cost-grid {
+        display: grid;
+        grid-template-columns: 0.75fr 1.25fr;
+        gap: 38px;
         align-items: start;
       }
 
+      .cost-lead,
       .fit-panel {
         padding: 30px;
         border: 1px solid var(--line);
@@ -629,6 +638,7 @@
         background: var(--ice);
       }
 
+      .cost-lead strong,
       .fit-panel strong {
         display: block;
         color: var(--navy);
@@ -637,28 +647,34 @@
         line-height: 0.98;
       }
 
+      .cost-lead p,
       .fit-panel p {
         margin: 18px 0 0;
         color: var(--slate);
         font-size: 17px;
       }
 
-      .trigger-grid {
+      .cost-list {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 14px;
       }
 
-      .trigger {
-        padding: 20px;
-        min-height: 116px;
+      .cost-item,
+      .scope,
+      .objection,
+      .trust-item {
+        padding: 22px;
         border: 1px solid var(--line);
         border-radius: 12px;
         background: var(--white);
-        box-shadow: 0 12px 30px rgba(8, 53, 84, 0.04);
+        box-shadow: 0 14px 34px rgba(8, 53, 84, 0.05);
       }
 
-      .trigger span {
+      .cost-item span,
+      .scope span,
+      .objection span,
+      .trust-item span {
         display: block;
         color: var(--blue);
         font-size: 12px;
@@ -666,89 +682,116 @@
         text-transform: uppercase;
       }
 
-      .trigger p {
-        margin: 10px 0 0;
-        color: var(--slate);
-        font-weight: 700;
-      }
-
-      .coordinate {
-        background: var(--soft);
-      }
-
-      .coord-grid {
-        display: grid;
-        grid-template-columns: 1fr 1.38fr;
-        gap: 42px;
-        align-items: start;
-      }
-
-      .scope-list {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-      }
-
-      .scope {
-        padding: 22px;
-        border: 1px solid var(--line);
-        border-radius: 12px;
-        background: var(--white);
-        transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
-      }
-
-      .scope:hover {
-        border-color: rgba(16, 107, 170, 0.5);
-        box-shadow: 0 18px 40px rgba(8, 53, 84, 0.08);
-        transform: translateY(-2px);
-      }
-
-      .scope b {
+      .cost-item b,
+      .scope b,
+      .objection b,
+      .trust-item b {
         display: block;
+        margin-top: 10px;
         color: var(--navy);
         font-size: 18px;
       }
 
-      .scope p {
+      .cost-item p,
+      .scope p,
+      .objection p,
+      .trust-item p {
         margin: 10px 0 0;
         color: var(--slate);
         font-size: 15px;
       }
 
-      .how {
+      .before-after {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .ba-card {
+        padding: 28px;
+        border-radius: 14px;
+        border: 1px solid var(--line);
         background: var(--white);
       }
 
-      .steps {
+      .ba-card.before {
+        border-color: rgba(169, 65, 59, 0.34);
+      }
+
+      .ba-card.after {
+        border-color: rgba(45, 122, 104, 0.34);
+        background: linear-gradient(180deg, rgba(240, 245, 250, 0.84), var(--white));
+      }
+
+      .ba-card ul,
+      .month-list {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        border-top: 1px solid var(--line);
-        border-left: 1px solid var(--line);
+        gap: 12px;
+        padding: 0;
+        margin: 22px 0 0;
+        list-style: none;
       }
 
-      .step {
-        min-height: 260px;
-        padding: 28px;
-        border-right: 1px solid var(--line);
-        border-bottom: 1px solid var(--line);
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(248, 251, 253, 0.92));
-      }
-
-      .step-num {
-        color: var(--blue);
-        font-family: "Barlow Condensed", Arial, sans-serif;
-        font-size: 42px;
-        font-weight: 700;
-        line-height: 1;
-      }
-
-      .step h3 {
-        margin-top: 44px;
-      }
-
-      .step p {
-        margin: 14px 0 0;
+      .ba-card li,
+      .month-list li {
+        padding: 12px 14px;
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        background: var(--soft);
         color: var(--slate);
+        font-weight: 700;
+      }
+
+      .owner-grid,
+      .scope-grid,
+      .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .owner {
+        min-height: 170px;
+        padding: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.07);
+      }
+
+      .owner span {
+        color: var(--amber);
+        font-size: 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .owner p {
+        margin: 12px 0 0;
+      }
+
+      .month-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+        gap: 36px;
+        align-items: start;
+      }
+
+      .month-card {
+        padding: clamp(28px, 4vw, 46px);
+        color: var(--white);
+        background: var(--navy);
+        border-radius: 16px;
+      }
+
+      .month-card h3 {
+        color: var(--white);
+        font-size: clamp(44px, 5vw, 66px);
+      }
+
+      .month-card p {
+        margin: 18px 0 0;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 19px;
       }
 
       .offer {
@@ -757,7 +800,7 @@
 
       .offer-grid {
         display: grid;
-        grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+        grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
         gap: 28px;
         align-items: stretch;
       }
@@ -793,40 +836,12 @@
         color: rgba(255, 255, 255, 0.88);
         border: 1px solid rgba(255, 255, 255, 0.18);
         border-radius: 10px;
-        font-weight: 700;
+        font-weight: 900;
       }
 
-      .offer-side {
+      .objection-list {
         display: grid;
         gap: 12px;
-      }
-
-      .future-module {
-        padding: 26px;
-        border: 1px solid var(--line);
-        border-radius: 14px;
-        background: var(--white);
-        box-shadow: 0 14px 34px rgba(8, 53, 84, 0.05);
-      }
-
-      .future-module h3 {
-        font-size: 34px;
-      }
-
-      .future-module p {
-        margin: 10px 0 0;
-        color: var(--slate);
-      }
-
-      .proof {
-        background: var(--white);
-      }
-
-      .proof-grid {
-        display: grid;
-        grid-template-columns: 0.8fr 1.2fr;
-        gap: 50px;
-        align-items: center;
       }
 
       .quote {
@@ -839,34 +854,7 @@
         line-height: 1;
       }
 
-      .proof-list {
-        display: grid;
-        gap: 18px;
-      }
-
-      .proof-item {
-        display: grid;
-        grid-template-columns: 112px 1fr;
-        gap: 22px;
-        padding-bottom: 18px;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .proof-item b {
-        color: var(--blue);
-        font-family: "Barlow Condensed", Arial, sans-serif;
-        font-size: 32px;
-        line-height: 1;
-      }
-
-      .proof-item p {
-        margin: 0;
-        color: var(--slate);
-        font-size: 17px;
-      }
-
       .cta {
-        padding: 94px 0;
         color: var(--white);
         background:
           linear-gradient(118deg, rgba(254, 169, 90, 0.18), transparent 28%),
@@ -919,25 +907,22 @@
         background: var(--white);
         border-top: 1px solid var(--line);
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 900;
       }
 
-      .footer-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 18px;
-      }
-
-      .footer-brand {
+      .footer-inner,
+      .footer-brand,
+      .footer-fyhr {
         display: flex;
         align-items: center;
         gap: 14px;
       }
 
+      .footer-inner {
+        justify-content: space-between;
+      }
+
       .footer-fyhr {
-        display: inline-flex;
-        align-items: center;
         gap: 8px;
         padding: 7px 10px;
         color: var(--white);
@@ -948,14 +933,18 @@
       .footer-fyhr span {
         color: rgba(255, 255, 255, 0.72);
         font-size: 10px;
-        font-weight: 900;
         letter-spacing: 0.08em;
         text-transform: uppercase;
       }
 
       .footer-fyhr img {
         width: 56px;
-        height: auto;
+      }
+
+      @media (max-width: 1060px) {
+        .tool-strip {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
       }
 
       @media (max-width: 980px) {
@@ -969,11 +958,10 @@
 
         .hero-grid,
         .section-head,
-        .problem-grid,
-        .fit-grid,
-        .coord-grid,
+        .thesis-grid,
+        .cost-grid,
+        .month-grid,
         .offer-grid,
-        .proof-grid,
         .cta-grid {
           grid-template-columns: 1fr;
         }
@@ -982,7 +970,9 @@
           max-width: 680px;
         }
 
-        .steps {
+        .owner-grid,
+        .scope-grid,
+        .trust-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
       }
@@ -997,19 +987,23 @@
         }
 
         h1 {
-          font-size: 56px;
+          font-size: 52px;
         }
 
         section,
         .cta {
-          padding: 68px 0;
+          padding: 66px 0;
         }
 
+        .metric-row,
         .coordination-map,
-        .scope-list,
-        .trigger-grid,
-        .deliverables,
-        .steps {
+        .tool-strip,
+        .cost-list,
+        .before-after,
+        .owner-grid,
+        .scope-grid,
+        .trust-grid,
+        .deliverables {
           grid-template-columns: 1fr;
         }
 
@@ -1026,15 +1020,8 @@
           grid-column: 2;
         }
 
-        .proof-item {
-          grid-template-columns: 1fr;
-        }
-
-        .metric-row {
-          grid-template-columns: 1fr;
-        }
-
-        .footer-inner {
+        .footer-inner,
+        .footer-brand {
           flex-direction: column;
           align-items: flex-start;
         }
@@ -1063,11 +1050,11 @@
           </a>
           <div class="nav-links">
             <a href="#problem">Problem</a>
-            <a href="#fit">Who it is for</a>
-            <a href="#coordinate">What we coordinate</a>
+            <a href="#ownership">Ownership</a>
+            <a href="#monthly">Monthly</a>
             <a href="#offer">Offer</a>
           </div>
-          <a class="button button-primary" href="#start">Get coordinated</a>
+          <a class="button button-primary" href="#start">Find the gaps</a>
         </div>
       </nav>
 
@@ -1085,15 +1072,15 @@
                   height="618"
                 />
               </div>
-              <h1>A coordinated HR function without hiring a department.</h1>
+              <h1>You have the tools. We coordinate the HR function.</h1>
               <p class="hero-copy">
-                HR Coordinator gives small businesses one operating layer for payroll, compliance,
-                onboarding, manager workflows, employee documentation, system access, and workforce
-                reporting.
+                HR Coordinator gives growing small businesses a coordinated HR function without hiring a department.
+                We own the follow-through between payroll, HR tools, vendors, managers, documentation, compliance,
+                onboarding, reporting, and workforce operations.
               </p>
               <div class="hero-actions">
-                <a class="button button-primary" href="#start">Get your HR function coordinated</a>
-                <a class="button button-secondary" href="#coordinate">See what we coordinate</a>
+                <a class="button button-primary" href="#start">Find the gaps in your HR function</a>
+                <a class="button button-secondary" href="#monthly">See what gets coordinated</a>
               </div>
               <p class="hero-note">
                 Built for founder-led and operator-led companies with 15 to 75 employees.
@@ -1108,10 +1095,10 @@
             <div class="system-panel" aria-label="HR Coordinator operating dashboard mockup">
               <div class="panel-header">
                 <div>
-                  <div class="panel-title">People System Control Layer</div>
-                  <div class="tag">Monthly coordination view</div>
+                  <div class="panel-title">People Function Control Layer</div>
+                  <div class="tag">Ownership view</div>
                 </div>
-                <div class="panel-status"><span class="pulse"></span> Active</div>
+                <div class="panel-status"><span class="pulse"></span> Coordinated</div>
               </div>
               <div class="metric-row" aria-label="Monthly coordination indicators">
                 <div class="mini-metric">
@@ -1156,12 +1143,12 @@
               <div class="task-list">
                 <div class="task">
                   <span class="check">OK</span>
-                  <span>New manager workflow moved from ad hoc to documented</span>
+                  <span>New manager workflow moved from memory to documented process</span>
                   <span class="tag">Owned</span>
                 </div>
                 <div class="task">
                   <span class="check">OK</span>
-                  <span>Employee file gaps flagged before renewal deadline</span>
+                  <span>Employee file gaps flagged before a deadline became urgent</span>
                   <span class="tag">Protected</span>
                 </div>
                 <div class="task">
@@ -1174,159 +1161,191 @@
           </div>
         </header>
 
-        <section class="problem" id="problem">
+        <section id="problem">
           <div class="container">
             <div class="section-head">
-              <h2>The problem is not that you lack HR tools.</h2>
+              <h2>The problem is not the tools.</h2>
               <p>
-                The problem is that no one owns the operating layer between your people, systems,
-                vendors, managers, and compliance obligations.
+                Most growing businesses already have payroll software, HR software, vendors, documents, policies, and managers.
+                The failures happen between them.
               </p>
             </div>
-            <div class="problem-grid">
-              <div class="problem-main">
-                <h3>You have payroll software, HR tools, vendors, and documents. But no coordinated function.</h3>
+            <div class="tool-strip" aria-label="Disconnected HR operating pieces">
+              <div class="tool">Payroll software</div>
+              <div class="tool">HR software</div>
+              <div class="tool">Benefits vendor</div>
+              <div class="tool">Employee files</div>
+              <div class="tool">Managers</div>
+              <div class="tool">Compliance dates</div>
+              <div class="tool">Reports</div>
+            </div>
+            <div class="gap-line" aria-label="Where failures happen">
+              <span></span>
+              <b>The ownership gap</b>
+              <span></span>
+            </div>
+            <div class="quote">
+              Small businesses rarely fail because they lack HR knowledge. They fail because nobody owns the follow-through.
+            </div>
+          </div>
+        </section>
+
+        <section class="dark" id="ownership">
+          <div class="container">
+            <div class="section-head">
+              <h2>The category is ownership.</h2>
+              <p>
+                Workforce Coordinator is not HR consulting, HR outsourcing, fractional HR, a PEO, HR software, or HR administration.
+              </p>
+            </div>
+            <div class="thesis-grid">
+              <div class="thesis-card" data-watermark="ADVICE">
+                <h3>Advice still leaves the work with you.</h3>
                 <p>
-                  That gap creates founder drag, manager inconsistency, onboarding mistakes, missing
-                  documentation, vendor confusion, and compliance exposure that only becomes visible
-                  when something breaks.
+                  A recommendation does not update the file, coordinate the vendor, close the manager loop, or document the decision.
                 </p>
               </div>
-              <div class="problem-side" aria-label="Common operational symptoms">
-                <div class="pain-row">No clear owner for employee documentation.</div>
-                <div class="pain-row">Managers handle people decisions differently.</div>
-                <div class="pain-row">Payroll, access, and onboarding live in separate workflows.</div>
-                <div class="pain-row">Compliance work happens only when a deadline gets loud.</div>
-                <div class="pain-row">The founder is still the escalation path.</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="fit" id="fit">
-          <div class="container fit-grid">
-            <div class="fit-panel">
-              <strong>For the business that has outgrown DIY HR but is not ready to hire a department.</strong>
-              <p>
-                Best fit: founder-led or operator-led companies with 15 to 75 employees, a first
-                manager layer, multiple vendors, and growing compliance exposure.
-              </p>
-            </div>
-            <div>
-              <div class="section-head" style="display: block; margin-bottom: 24px">
-                <p class="eyebrow">Trigger events</p>
-                <h2>When the informal system starts costing real money.</h2>
-              </div>
-              <div class="trigger-grid">
-                <div class="trigger">
-                  <span>Hiring</span>
-                  <p>You are adding employees faster than your onboarding process can absorb.</p>
-                </div>
-                <div class="trigger">
-                  <span>Manager layer</span>
-                  <p>Managers are making HR decisions without one documented operating standard.</p>
-                </div>
-                <div class="trigger">
-                  <span>Compliance</span>
-                  <p>A termination, leave issue, audit, or policy gap exposed operational risk.</p>
-                </div>
-                <div class="trigger">
-                  <span>Systems</span>
-                  <p>You pay for software but still run the people function manually.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="coordinate" id="coordinate">
-          <div class="container">
-            <div class="section-head">
-              <h2>We coordinate the people systems your business depends on.</h2>
-              <p>
-                HR Coordinator is not another app and not advice that leaves you with more work.
-                It is recurring operational ownership of follow-through.
-              </p>
-            </div>
-            <div class="coord-grid">
-              <div class="fit-panel">
-                <strong>One accountable operating layer.</strong>
+              <div class="thesis-card" data-watermark="OWNER">
+                <h3>Ownership creates the function.</h3>
                 <p>
-                  We connect the work that usually falls between payroll providers, HR software,
-                  founders, managers, finance, IT, and compliance.
+                  HR Coordinator becomes the accountable operating layer between your people, systems, vendors, managers, and obligations.
                 </p>
               </div>
-              <div class="scope-list">
-                <div class="scope">
-                  <b>Payroll coordination</b>
-                  <p>Change requests, status checks, vendor follow-up, and clean handoffs.</p>
-                </div>
-                <div class="scope">
-                  <b>Compliance readiness</b>
-                  <p>Policies, renewals, required records, and visible risk tracking.</p>
-                </div>
-                <div class="scope">
-                  <b>Onboarding operations</b>
-                  <p>Forms, role setup, system access, manager steps, and employee files.</p>
-                </div>
-                <div class="scope">
-                  <b>Manager workflows</b>
-                  <p>Consistent processes for performance, escalation, documentation, and decisions.</p>
-                </div>
-                <div class="scope">
-                  <b>Employee documentation</b>
-                  <p>Centralized records, missing item checks, and defensible file hygiene.</p>
-                </div>
-                <div class="scope">
-                  <b>Workforce reporting</b>
-                  <p>Monthly status, open risks, unresolved tasks, and next actions.</p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
 
-        <section class="how" id="how">
-          <div class="container">
-            <div class="section-head">
-              <h2>How the function gets coordinated.</h2>
+        <section>
+          <div class="container cost-grid">
+            <div class="cost-lead">
+              <strong>The hidden cost of DIY HR is not paperwork. It is founder time, risk, and inconsistency.</strong>
               <p>
-                The subscription starts by making the current state visible, then turns recurring HR
-                work into an owned monthly operating rhythm.
+                The company looks operational until a deadline, termination, payroll change, onboarding mistake, or manager decision exposes the gap.
               </p>
             </div>
-            <div class="steps">
-              <div class="step">
-                <div class="step-num">01</div>
-                <h3>Map</h3>
-                <p>Inventory systems, vendors, documents, workflows, risks, owners, and recurring obligations.</p>
+            <div class="cost-list">
+              <div class="cost-item">
+                <span>Founder time tax</span>
+                <b>Every exception goes back to leadership.</b>
+                <p>The founder becomes the system because the system was never owned.</p>
               </div>
-              <div class="step">
-                <div class="step-num">02</div>
-                <h3>Clean</h3>
-                <p>Close the highest-risk gaps in employee files, onboarding, manager workflows, and compliance.</p>
+              <div class="cost-item">
+                <span>Manager inconsistency</span>
+                <b>People decisions depend on who handles them.</b>
+                <p>Documentation, escalation, and follow-up vary by manager.</p>
               </div>
-              <div class="step">
-                <div class="step-num">03</div>
-                <h3>Coordinate</h3>
-                <p>Run the monthly operating layer across payroll, HR, vendors, managers, and reporting.</p>
+              <div class="cost-item">
+                <span>Compliance exposure</span>
+                <b>Risk stays invisible until it gets expensive.</b>
+                <p>Missing files and unclear records become problems at the worst time.</p>
               </div>
-              <div class="step">
-                <div class="step-num">04</div>
-                <h3>Report</h3>
-                <p>Give leadership a clear view of what is owned, what is exposed, and what moves next.</p>
+              <div class="cost-item">
+                <span>Tool waste</span>
+                <b>Software does not coordinate itself.</b>
+                <p>The business pays for systems but still runs the function manually.</p>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="offer" id="offer">
+        <section class="dark">
           <div class="container">
             <div class="section-head">
-              <h2>The first wedge is HR. The category is workforce coordination.</h2>
+              <h2>Who owns this today?</h2>
               <p>
-                Start with HR Coordinator. Expand into the coordinated back-office layer where HR,
-                IT, and Finance operate as one subscription-based service.
+                In most growing companies, the honest answer is nobody. The work is split across people who are already doing another job.
+              </p>
+            </div>
+            <div class="owner-grid">
+              <div class="owner">
+                <span>Founder</span>
+                <p>Owns escalations, exceptions, urgent decisions, and the anxiety of not knowing what is exposed.</p>
+              </div>
+              <div class="owner">
+                <span>Operations</span>
+                <p>Chases vendors, managers, documents, deadlines, and systems without a dedicated HR function.</p>
+              </div>
+              <div class="owner">
+                <span>Managers</span>
+                <p>Handle employee issues differently because the process lives in memory instead of a standard.</p>
+              </div>
+              <div class="owner">
+                <span>Payroll vendor</span>
+                <p>Processes inputs, but does not own the full people system around those inputs.</p>
+              </div>
+              <div class="owner">
+                <span>HR software</span>
+                <p>Stores pieces of the work, but does not make sure the work is finished.</p>
+              </div>
+              <div class="owner">
+                <span>Documents</span>
+                <p>Exist somewhere, but nobody owns whether they are current, complete, and defensible.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="container">
+            <div class="section-head">
+              <h2>Before HR Coordinator. After HR Coordinator.</h2>
+              <p>
+                The difference is not a new tool. The difference is visible ownership of the function.
+              </p>
+            </div>
+            <div class="before-after">
+              <div class="ba-card before">
+                <p class="eyebrow">Before</p>
+                <h3>Everyone touches HR. Nobody owns HR.</h3>
+                <ul>
+                  <li>Payroll changes live in messages and memory.</li>
+                  <li>Employee files are scattered or incomplete.</li>
+                  <li>Managers improvise people decisions.</li>
+                  <li>Compliance work waits until deadlines get urgent.</li>
+                  <li>Leadership cannot see the real operating risk.</li>
+                </ul>
+              </div>
+              <div class="ba-card after">
+                <p class="eyebrow">After</p>
+                <h3>The HR function has an operating layer.</h3>
+                <ul>
+                  <li>Open items have owners, status, and next actions.</li>
+                  <li>Documentation gaps are visible before they become problems.</li>
+                  <li>Managers use consistent workflows.</li>
+                  <li>Vendors get coordinated, not just contacted.</li>
+                  <li>Leadership sees what is protected, exposed, and moving.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="dark" id="monthly">
+          <div class="container month-grid">
+            <div class="month-card">
+              <p class="eyebrow" style="color: var(--amber)">Monthly operating layer</p>
+              <h3>What gets coordinated every month.</h3>
+              <p>
+                HR Coordinator turns scattered people operations into a recurring operating rhythm with visible ownership and leadership reporting.
+              </p>
+            </div>
+            <ul class="month-list">
+              <li>Payroll changes, employee updates, and vendor follow-through.</li>
+              <li>Onboarding steps, access handoffs, forms, and manager readiness.</li>
+              <li>Employee documentation, missing records, and file hygiene.</li>
+              <li>Manager workflows for performance, escalation, and decisions.</li>
+              <li>Compliance dates, policy needs, renewal items, and risk visibility.</li>
+              <li>Monthly leadership report with open items, closed items, and next actions.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="offer" class="offer">
+          <div class="container">
+            <div class="section-head">
+              <h2>HR Coordinator is the flagship offer. Workforce Coordinator is the category.</h2>
+              <p>
+                Start by coordinating the HR function. Expand into the operating layer where HR, IT, Finance, compliance, vendors, and reporting connect.
               </p>
             </div>
             <div class="offer-grid">
@@ -1334,62 +1353,104 @@
                 <p class="eyebrow" style="color: var(--amber)">Flagship offer</p>
                 <h3>HR Coordinator</h3>
                 <p>
-                  A monthly HR operating subscription for small businesses that need ownership of
-                  follow-through before they can justify hiring a department.
+                  A monthly operating subscription for growing small businesses that need a coordinated HR function before they can justify hiring a department.
                 </p>
                 <div class="deliverables">
-                  <div class="deliverable">Monthly HR operating review</div>
-                  <div class="deliverable">Employee documentation tracker</div>
+                  <div class="deliverable">HR function map</div>
+                  <div class="deliverable">Monthly operating review</div>
                   <div class="deliverable">Payroll and vendor coordination</div>
-                  <div class="deliverable">Onboarding and manager workflow support</div>
+                  <div class="deliverable">Employee documentation tracker</div>
                   <div class="deliverable">Compliance readiness dashboard</div>
                   <div class="deliverable">Leadership action report</div>
                 </div>
               </div>
-              <div class="offer-side">
-                <div class="future-module">
-                  <h3>IT Coordinator</h3>
-                  <p>System access, device handoffs, permissions, vendor routing, and employee technology readiness.</p>
+              <div class="objection-list">
+                <div class="objection">
+                  <span>Not consulting</span>
+                  <b>We do not leave you with more work.</b>
+                  <p>The service is built around ownership, follow-through, and monthly operating visibility.</p>
                 </div>
-                <div class="future-module">
-                  <h3>Finance Coordinator</h3>
-                  <p>Payroll inputs, workforce cost visibility, vendor handoffs, approvals, and recurring reporting.</p>
+                <div class="objection">
+                  <span>Not software</span>
+                  <b>We coordinate the systems you already have.</b>
+                  <p>Software stores the work. HR Coordinator makes sure the work moves.</p>
                 </div>
-                <div class="future-module">
-                  <h3>Compliance Coordinator</h3>
-                  <p>Required records, policy timing, renewal visibility, audit readiness, and defensible documentation.</p>
+                <div class="objection">
+                  <span>Not a department</span>
+                  <b>You get the operating layer before the headcount.</b>
+                  <p>Designed for companies too complex for DIY HR and too early for a full internal department.</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="proof">
-          <div class="container proof-grid">
-            <div class="quote">
-              You do not need another HR tool. You need someone to own the follow-through.
+        <section>
+          <div class="container">
+            <div class="section-head">
+              <h2>What we actually own.</h2>
+              <p>
+                The service is intentionally narrow where it must be narrow and operational where it must be operational.
+              </p>
             </div>
-            <div class="proof-list">
-              <div class="proof-item">
-                <b>15-75</b>
-                <p>
-                  The employee range where the informal system breaks, but a full HR department is
-                  still hard to justify.
-                </p>
+            <div class="scope-grid">
+              <div class="scope">
+                <span>Visibility</span>
+                <b>What exists, what is missing, and what is exposed.</b>
+                <p>Current-state maps, document checks, open risks, and leadership-ready status.</p>
               </div>
-              <div class="proof-item">
-                <b>1 layer</b>
-                <p>
-                  One operating layer connects people, tools, vendors, managers, compliance, and
-                  leadership visibility.
-                </p>
+              <div class="scope">
+                <span>Coordination</span>
+                <b>Who needs to do what next.</b>
+                <p>Vendor handoffs, manager follow-up, payroll changes, onboarding steps, and deadline routing.</p>
               </div>
-              <div class="proof-item">
-                <b>Monthly</b>
-                <p>
-                  A recurring subscription rhythm turns scattered HR work into owned operational
-                  follow-through.
-                </p>
+              <div class="scope">
+                <span>Documentation</span>
+                <b>What needs to be defensible later.</b>
+                <p>Employee files, manager decisions, process records, and proof of follow-through.</p>
+              </div>
+              <div class="scope">
+                <span>Rhythm</span>
+                <b>The operating cadence that keeps HR from drifting.</b>
+                <p>Monthly review, status reporting, and recurring tasks that stop being founder memory.</p>
+              </div>
+              <div class="scope">
+                <span>Escalation</span>
+                <b>What needs leadership, legal, vendor, or specialist input.</b>
+                <p>We identify the line, route the issue, and keep the follow-through visible.</p>
+              </div>
+              <div class="scope">
+                <span>Readiness</span>
+                <b>The function becomes ready before the business is forced to react.</b>
+                <p>Cleaner workflows, clearer accountability, and fewer surprises when complexity increases.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="dark">
+          <div class="container">
+            <div class="section-head">
+              <h2>Built by operators for operators.</h2>
+              <p>
+                The buyer is not looking for HR theater. They are looking for a dependable operating layer that reduces drag, exposes risk, and closes loops.
+              </p>
+            </div>
+            <div class="trust-grid">
+              <div class="trust-item">
+                <span>Operational lens</span>
+                <b>Business outcomes before HR jargon.</b>
+                <p>Every workflow is evaluated by clarity, risk, accountability, and follow-through.</p>
+              </div>
+              <div class="trust-item">
+                <span>Defensible records</span>
+                <b>Documentation matters when the moment gets serious.</b>
+                <p>The service treats employee files, manager decisions, and process records as operating assets.</p>
+              </div>
+              <div class="trust-item">
+                <span>Founder relief</span>
+                <b>Leadership gets visibility instead of random escalation.</b>
+                <p>The monthly report shows what moved, what is exposed, and what requires a decision.</p>
               </div>
             </div>
           </div>
@@ -1398,21 +1459,19 @@
         <section class="cta" id="start">
           <div class="container cta-grid">
             <div>
-              <p class="eyebrow" style="color: var(--amber)">Start here</p>
-              <h2>Get your HR function coordinated.</h2>
+              <p class="eyebrow" style="color: var(--amber)">Start with the ownership gap</p>
+              <h2>Find out where your HR function is being held together by memory.</h2>
               <p>
-                For small businesses carrying HR risk through founder memory, payroll support,
-                disconnected tools, and manager improvisation.
+                The first step is a practical readiness review: what exists, what is scattered, what is exposed, who owns it today, and what should move into the monthly coordination layer.
               </p>
             </div>
             <div class="cta-box">
-              <strong>HR Coordinator Readiness Review</strong>
+              <strong>Request an HR Coordination Review</strong>
               <p>
-                A practical first step to identify what is owned, what is exposed, and what should
-                move into the monthly coordination layer.
+                Built for small businesses that already have the tools but need the function coordinated.
               </p>
-              <a class="button button-primary" href="mailto:hello@fyhr.com?subject=HR%20Coordinator%20Readiness%20Review">
-                Request the review
+              <a class="button button-primary" href="mailto:hello@fyhr.com?subject=HR%20Coordination%20Review">
+                Find the gaps
               </a>
             </div>
           </div>
@@ -1433,7 +1492,7 @@
               />
             </span>
           </div>
-          <span>HR Coordinator gives small businesses a coordinated HR function without hiring a department.</span>
+          <span>A coordinated HR function without hiring a department.</span>
         </div>
       </footer>
     </div>
